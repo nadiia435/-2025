@@ -1,0 +1,33 @@
+{
+  "printWidth": 80,                  // перенос строк после 80 символов
+  "tabWidth": 2,                     // 2 пробела для читаемости
+  "useTabs": false,                  // пробелы вместо табов
+  "semi": true,                      // точка с запятой в JS
+  "singleQuote": true,               // одинарные кавычки
+  "trailingComma": "es5",            // запятая в объектах/массивах
+  "bracketSpacing": true,            // пробелы внутри {} в JS/CSS
+  "jsxBracketSameLine": false,       // > на новой строке в JSX/HTML
+  "arrowParens": "avoid",            // стрелочные функции без ()
+  "proseWrap": "always",             // перенос в markdown
+  "htmlWhitespaceSensitivity": "css", // аккуратный HTML
+  "endOfLine": "lf",                 // одинаковые переносы строк
+  "embeddedLanguageFormatting": "auto",
+
+  // ✅ Новый плагин – сортировка атрибутов в HTML
+  "plugins": ["prettier-plugin-organize-attributes"],
+  "organizeAttributes": [
+    "class",
+    "id",
+    "name",
+    "data-*",
+    "src",
+    "for",
+    "type",
+    "href",
+    "values",
+    "title",
+    "alt",
+    "role",
+    "aria-*"
+  ]
+}

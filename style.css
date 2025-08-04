@@ -1,0 +1,299 @@
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v48-latin-regular.woff2") format("woff2");
+}
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-v48-latin-500.woff2") format("woff2");
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v48-latin-700.woff2") format("woff2");
+}
+/* roboto-900 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/roboto-v48-latin-900.woff2") format("woff2");
+}
+
+/* raleway-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/raleway-v36-latin-regular.woff2") format("woff2");
+}
+/* raleway-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/raleway-v36-latin-700.woff2") format("woff2");
+}
+
+:root {
+  /* Brand Colors */
+
+  --color-brand-primary: #2196f3; /* Синий: кнопки, логотип */
+  --color-brand-hover: #188ce8; /* Hover-состояние */
+
+  /* Чёрные и серы*/
+
+  --color-true-black: #000000; /* Иконки */
+  --color-text-main: #212121; /* Основной текст */
+  --color-text-secondary: #757575; /* Второстепенный текст */
+  --color-text-inverse: #ffffff; /* белый текст */
+
+  /*  Белые и светлые фоны */
+
+  --color-bg-default: #ffffff; /* Белый фон */
+  --color-bg-light: #f5f4fa; /* Светлый фон для блоков */
+  --color-bg-dark: #2f303a; /* Тёмный фон — футер */
+  --color-bg-divider: #ececec; /* Линии, разделители */
+
+  /*Границы и UI */
+  --color-border-light: #afb1b8; /* Светлая обводка, иконки соцсетей */
+
+  /* Overlay / затемнение*/
+
+  --overlay-dark-40: rgba(47, 48, 58, 0.4); /* Затемнение hero секции */
+
+  /* Time */
+  --trTime: 0.5s;
+}
+
+/* Base */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* === HEADER === */
+
+.header {
+  background-color: var(--color-bg-default);
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 93px;
+}
+
+.header-logo {
+  color: var(--color-true-black);
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.78px;
+}
+
+.header-logo span {
+  color: var(--color-brand-primary);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+.menu-item {
+  color: var(--color-text-main);
+  transition: color var(--trTime);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+}
+
+.menu-item:hover {
+  color: var(--color-brand-primary);
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 30px;
+  color: var(--color-text-secondary);
+}
+
+.header-contacts a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color var(--trTime);
+}
+
+.header-contacts a:hover {
+  color: var(--color-brand-primary);
+}
+
+.header-contacts a:hover svg path {
+  fill: var(--color-brand-primary);
+}
+
+.header-contact svg path {
+  transition: fill var(--trTime);
+}
+
+/* === HERO === */
+
+.hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(img/Teamwork\ in\ action\ at\ a\ modern\ workspace.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 200px 0 280px;
+  text-align: center;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 696px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.hero-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 2.64px; /* 6% от 44px */
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-text-inverse);
+  margin: 0 0 30px 0;
+}
+.hero-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  /* Тень  */
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* Advantages section */
+
+.advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.advantages-item {
+  width: 270px;
+  background-color: var(--color-bg-default);
+  border-radius: 4px;
+  text-align: center;
+  padding: 30px 15px 0;
+}
+
+.advantages-icon {
+  width: 100%;
+  height: 120px;
+  background-color: var(--color-bg-light);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.advantages-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+  margin: 0 0 10px;
+}
+
+.advantages-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7; /*  24px */
+  letter-spacing: 0.42px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  width: 270px;
+  margin: 0 auto;
+}
