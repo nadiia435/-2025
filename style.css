@@ -106,8 +106,6 @@ ol {
 
 .header {
   background-color: var(--color-bg-default);
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .container {
@@ -150,15 +148,34 @@ ol {
 }
 
 .menu-item {
+  padding: 25px 0;
   color: var(--color-text-main);
   transition: color var(--trTime);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.28px;
+  position: relative;
+}
+
+.menu-item::after {
+  content: "";
+  width: 0;
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-brand-primary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width var(--trTime);
 }
 
 .menu-item:hover {
   color: var(--color-brand-primary);
+}
+
+.menu-item:hover::after {
+  width: 100%;
 }
 
 .header-contacts {
@@ -191,50 +208,48 @@ ol {
 /* === HERO === */
 
 .hero {
+  height: 600px;
+  display: flex;
+  align-items: center;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(img/Teamwork\ in\ action\ at\ a\ modern\ workspace.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 200px 0 280px;
+  background-size: cover;
   text-align: center;
+  color: var(--color-text-inverse);
 }
 
 .hero-container {
-  display: flex;
+  padding: 200px 0 280px;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   max-width: 696px;
-  width: 100%;
-  padding: 0 15px;
 }
 
 .hero-title {
-  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 2.64px; /* 6% от 44px */
   text-align: center;
   text-transform: uppercase;
-  color: var(--color-text-inverse);
   margin: 0 0 30px 0;
 }
 .hero-btn {
+  align-items: center;
   width: 200px;
   height: 50px;
   border-radius: 4px;
-  background-color: var(--color-brand-primary);
   color: var(--color-text-inverse);
-  font-family: "Roboto", sans-serif;
+  background-color: var(--color-brand-primary);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
-  text-align: center;
+  letter-spacing: 0.96px;
   border: none;
   cursor: pointer;
   /* Тень  */
@@ -245,12 +260,11 @@ ol {
 
 .advantages {
   padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 47px;
 }
 
 .advantages-list {
   display: flex;
-  justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
@@ -276,7 +290,6 @@ ol {
 }
 
 .advantages-title {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
@@ -287,13 +300,146 @@ ol {
 }
 
 .advantages-text {
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7; /*  24px */
   letter-spacing: 0.42px;
-  text-align: center;
   color: var(--color-text-secondary);
-  width: 270px;
   margin: 0 auto;
+}
+
+/* Services section */
+
+.services {
+  padding: 47px 0 94px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.services-title {
+  margin: 0 0 50px;
+  color: var(--color-text-main);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.08px;
+}
+
+.services-item {
+  width: 370px;
+  height: 294px;
+  position: relative;
+}
+
+.services-image {
+  width: 100%;
+  height: 100%;
+}
+
+.services-item h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 27px;
+  margin: 0;
+  color: var(--color-text-inverse);
+  text-align: center;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+/* Team */
+
+.team {
+  background-color: var(--color-bg-light);
+  padding: 94px 0;
+}
+
+.team-title {
+  font-size: 36px;
+  letter-spacing: 1.08px;
+  margin-bottom: 50px;
+  margin-top: 0;
+  color: var(--color-text-main);
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.team-item {
+  background-color: #fff;
+  width: 270px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 2px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.team-name,
+.team-role {
+  font-size: 16px;
+  letter-spacing: 0.48px;
+  text-align: center;
+  margin: 0;
+}
+
+.team-name {
+  color: var(--color-text-main);
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.team-role {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--trTime);
+}
+
+.social-link:hover {
+  background-color: var(--color-brand-primary);
+}
+
+.social-link:hover svg path {
+  fill: #ffffff;
+}
+
+.team-socials svg path {
+  fill: #afb1b8;
+  transition: fill var(--trTime);
 }
