@@ -604,3 +604,124 @@ h2 {
 .footer .web {
   color: var(--color-brand-primary);
 }
+
+/* Portfolio */
+
+/* portfolio section */
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 50px;
+  padding: 94px 0 0;
+}
+
+.filter-btn {
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: var(--color-bg-light);
+  color: var(--btn-text, inherit);
+  cursor: pointer;
+  transition: background-color var(--trTime), color var(--trTime),
+    fill var(--trTime);
+}
+
+/* Индивидуальные паддинги */
+.btn-all {
+  padding: 6px 25px;
+}
+.btn-web {
+  padding: 6px 24px;
+}
+.btn-app {
+  padding: 6px 39px;
+}
+.btn-des {
+  padding: 6px 22px;
+}
+.btn-mar {
+  padding: 6px 22px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #eee;
+  transition: box-shadow 0.25s ease;
+  background: var(--color-bg-default);
+}
+
+.card-link:hover,
+.card-link:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+.card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card:first-child .card-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 24px 63px;
+  background: #2196f3e5;
+  color: var(--color-text-inverse);
+  line-height: 1.56;
+  letter-spacing: 0.54px;
+  transform: translateY(100%);
+  transition: transform var(--trTime);
+  margin: 0;
+}
+
+.card:first-child .card-link:hover .card-overlay,
+.card:first-child .card-link:focus .card-overlay {
+  transform: translateY(0);
+}
+
+.card-info {
+  padding: 20px 24px;
+}
+.card-title {
+  margin: 0 0 4px;
+  font-size: 18px;
+  letter-spacing: 1.08px;
+  color: var(--color-text-main);
+}
+.card-category {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
