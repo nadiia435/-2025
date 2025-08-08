@@ -507,6 +507,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+.logo span {
+  color: var(--color-brand-primary);
+}
+
 .footer-contacts li {
   margin-bottom: 9px;
   color: #ffffff99;
@@ -593,4 +597,10 @@ h2 {
 
 .footer-form {
   max-width: 100%;
+}
+.footer-logo span {
+  color: var(--color-text-inverse);
+}
+.footer .web {
+  color: var(--color-brand-primary);
 }
