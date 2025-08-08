@@ -102,6 +102,18 @@ ol {
   list-style: none;
 }
 
+h2 {
+  color: var(--color-text-main);
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
 /* === HEADER === */
 
 .header {
@@ -129,7 +141,7 @@ ol {
   gap: 93px;
 }
 
-.header-logo {
+.logo {
   color: var(--color-true-black);
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -137,7 +149,7 @@ ol {
   letter-spacing: 0.78px;
 }
 
-.header-logo span {
+.logo span {
   color: var(--color-brand-primary);
 }
 
@@ -320,16 +332,6 @@ ol {
   gap: 30px;
 }
 
-.services-title {
-  margin: 0 0 50px;
-  color: var(--color-text-main);
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 1.08px;
-}
-
 .services-item {
   width: 370px;
   height: 294px;
@@ -364,15 +366,6 @@ ol {
   padding: 94px 0;
 }
 
-.team-title {
-  font-size: 36px;
-  letter-spacing: 1.08px;
-  margin-bottom: 50px;
-  margin-top: 0;
-  color: var(--color-text-main);
-  text-align: center;
-}
-
 .team-list {
   display: flex;
   gap: 30px;
@@ -383,7 +376,7 @@ ol {
 }
 
 .team-item {
-  background-color: #fff;
+  background-color: var(--color-bg-default);
   width: 270px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
@@ -423,7 +416,7 @@ ol {
 .social-link {
   width: 44px;
   height: 44px;
-  background-color: #fff;
+  background-color: var(--color-bg-default);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -436,10 +429,168 @@ ol {
 }
 
 .social-link:hover svg path {
-  fill: #ffffff;
+  fill: var(--color-text-inverse);
 }
 
 .team-socials svg path {
   fill: #afb1b8;
   transition: fill var(--trTime);
+}
+
+/* clients section */
+
+.clients {
+  padding: 94px 0;
+}
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color var(--trTime);
+}
+
+.client-link svg path {
+  fill: #afb1b8;
+  transition: fill var(--trTime);
+}
+.client-link:hover {
+  border-color: var(--color-brand-primary);
+}
+
+.client-link:hover svg path {
+  fill: var(--color-brand-primary);
+}
+
+/* footer */
+
+.footer {
+  height: 252px;
+  background: var(--color-bg-dark);
+  padding: 60px 0;
+  color: var(--color-text-inverse);
+}
+.footerflex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  column-gap: 70px;
+  flex-wrap: wrap;
+}
+
+.footer-contacts {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer-contacts li {
+  margin-bottom: 9px;
+  color: #ffffff99;
+}
+.footer-address {
+  color: #fff;
+}
+
+.footer-title {
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
+.social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer .social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff1a;
+  transition: background-color var(--trTime);
+}
+
+.footer .social-link:hover {
+  background-color: var(--color-brand-primary);
+}
+
+.footer .social-link:hover svg path {
+  fill: var(--color-text-inverse);
+}
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.subscribe-form input {
+  width: 358px;
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ffffff4d;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.subscribe-form button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 64px 10px 31px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.footer-form {
+  max-width: 100%;
 }
