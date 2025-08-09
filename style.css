@@ -729,3 +729,41 @@ h2 {
   color: var(--color-text-secondary);
   margin: 0;
 }
+/* Эфект  */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card.hide {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  pointer-events: none;
+}
+
+.card.show {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  animation: cardFadeIn 0.5s forwards;
+}
+
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Подсветка активной кнопки */
+.filter-btn.is-active {
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
